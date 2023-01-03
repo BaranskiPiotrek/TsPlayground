@@ -1,7 +1,7 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
-import { createRequest } from "node-mocks-http"
+import { createRequest } from "node-mocks-http";
 
 describe("AppController", () => {
   let appController: AppController;
