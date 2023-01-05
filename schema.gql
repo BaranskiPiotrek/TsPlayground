@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""
+tool
+"""
+type Tool {
+  id: ID!
+  title: String!
+  description: String
+  creationDate: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  toolsByTitle(title: String!): [Tool!]!
+  getAllTools: [Tool!]!
+}
+
+type Mutation {
+  createTool(title: String!, description: String!): Tool!
+}
