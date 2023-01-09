@@ -2,9 +2,7 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-"""
-tool
-"""
+"""tool"""
 type Tool {
   id: ID!
   title: String!
@@ -23,5 +21,14 @@ type Query {
 }
 
 type Mutation {
-  createTool(title: String!, description: String!): Tool!
+  createTool(newToolInput: NewToolInput!): Tool!
+}
+
+input NewToolInput {
+  title: String!
+  description: String
+}
+
+type Subscription {
+  toolAdded: Tool!
 }

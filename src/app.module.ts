@@ -20,7 +20,9 @@ import { ToolsModule } from "./tools/tools.module";
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: "schema.gql",
-      //autoSchemaFile: true,
+      subscriptions: {
+        "graphql-ws": true,
+      },
     }),
     ToolsModule,
   ],
